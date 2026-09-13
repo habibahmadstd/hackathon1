@@ -71,8 +71,8 @@ except ImportError:
 PAGE_TITLE = "LEED IEQ Space Analyzer"
 PAGE_ICON  = "🏛️"
 
-GEMINI_MODEL = "gemini-2.0-flash"          # falls back to 1.5-flash if needed
-GEMINI_FALLBACK = "gemini-1.5-flash"
+GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_FALLBACK = "gemini-2.0-flash"
 
 # Colour palette
 COLOR_REGULAR     = (34,  197,  94)   # green-500
