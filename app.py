@@ -68,7 +68,7 @@ except ImportError:
 # CONFIGURATION
 # ══════════════════════════════════════════════════════════════════════════════
 
-PAGE_TITLE = "LEED IEQ Space Analyzer"
+PAGE_TITLE = "SpaceSense"
 PAGE_ICON  = "🏛️"
 
 GEMINI_MODEL = "gemini-2.5-flash"
@@ -725,7 +725,6 @@ def main() -> None:
 
         st.divider()
         st.markdown(
-            "**Model:** `gemini-2.5-flash`  \n"
             "**Standard:** LEED v4.1/v5 IEQ  \n"
             "**Output:** Excel + Annotated PDF"
         )
@@ -738,7 +737,7 @@ def main() -> None:
     # ── Header ─────────────────────────────────────────────────────────────
     st.markdown(
         "<h1 style='font-size:32px;font-weight:800;color:#0F172A;"
-        "margin-bottom:4px;'>🏛️ LEED IEQ Space Analyzer</h1>"
+        "margin-bottom:4px;'>🏛️ SpaceSense</h1>"
         "<p style='color:#64748B;font-size:15px;margin-top:0;'>"
         "Upload an architectural floor plan → AI classifies every space → "
         "Download Excel report + Annotated PDF</p>",
@@ -961,16 +960,6 @@ def main() -> None:
                      caption="Green = Regularly Occupied · Red = Non-Regularly Occupied · Yellow = Unknown")
         except Exception as e:
             st.warning(f"Preview unavailable: {e}")
-
-        # Raw JSON expander
-        with st.expander("🔍  View raw Gemini response JSON"):
-            raw = analysis.pop("_raw_response", None)
-            st.json(analysis)
-            if raw:
-                analysis["_raw_response"] = raw
-                st.markdown("**Full model response:**")
-                st.text_area("", raw, height=300, label_visibility="collapsed")
-
 
 def _render_preview(base_image: Image.Image, analysis: dict) -> Image.Image:
     """Lightweight in-app preview (no PDF, returns PIL Image)."""
