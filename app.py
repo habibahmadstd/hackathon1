@@ -697,12 +697,8 @@ def main() -> None:
 
     # ── Sidebar ────────────────────────────────────────────────────────────
     with st.sidebar:
-        st.image(
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/"
-            "USGBC_logo.svg/320px-USGBC_logo.svg.png",
-            width=160,
-        )
-        st.markdown("### LEED IEQ Analyzer")
+        st.image("logo.png", width=160)
+        st.markdown("### SpaceSense")
         st.caption(
             "Automates USGBC LEED v4.1/v5 Indoor Environmental Quality "
             "space categorization from architectural floor plans using "
