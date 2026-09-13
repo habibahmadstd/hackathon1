@@ -72,7 +72,7 @@ PAGE_TITLE = "LEED IEQ Space Analyzer"
 PAGE_ICON  = "🏛️"
 
 GEMINI_MODEL = "gemini-2.5-flash"
-GEMINI_FALLBACK = "gemini-2.0-flash"
+GEMINI_FALLBACK = "gemini-3.6-flash"
 
 # Colour palette
 COLOR_REGULAR     = (34,  197,  94)   # green-500
@@ -725,7 +725,7 @@ def main() -> None:
 
         st.divider()
         st.markdown(
-            "**Model:** `gemini-2.0-flash`  \n"
+            "**Model:** `gemini-2.5-flash`  \n"
             "**Standard:** LEED v4.1/v5 IEQ  \n"
             "**Output:** Excel + Annotated PDF"
         )
