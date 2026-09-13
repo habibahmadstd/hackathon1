@@ -914,7 +914,7 @@ def main() -> None:
                     return "background-color:#DCFCE7; color:#166534; font-weight:600"
                 return "background-color:#FEF9C3; color:#854D0E; font-weight:600"
 
-            styled = df.style.applymap(_color_cls, subset=["Classification"])
+            styled = df.style.map(_color_cls, subset=["Classification"])
             st.dataframe(styled, use_container_width=True, hide_index=True)
 
         # ── Downloads ──────────────────────────────────────────────────────
